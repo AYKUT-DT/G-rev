@@ -39,6 +39,8 @@ function ekle()
 function sil()
 {
     document.getElementById("listeYapilacaklar").innerHTML = "";
+  document.getElementById("listeYapilacaklar1").innerHTML = "";
+  document.getElementById("listeYapilacaklar2").innerHTML = "";
 }
 
 
