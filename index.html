@@ -6,55 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Takım Çalışması</title>
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css">    
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
     <script src="app.js"></script>
+
 </head>
 
 <body>
-
-    <h1>TAKIM ÇALIŞMASI</h1>
     <div class="mission_add">
+        <h1>TAKIM ÇALIŞMASI</h1>
         <h2>Görev Ekle</h2>
-        <input type="text" id="head" placeholder="Başlık">
-        <input type="text" id="info" placeholder="Açıklama">
-        <input type="date" id="date" placeholder="Bitiş Tarihi">
+        <input type="text" id="head" placeholder="Başlık" value="Test">
+        <input type="text" id="info" placeholder="Açıklama" value="Desc">
+        <input type="date" id="date" placeholder="Bitiş Tarihi" value="5/2/2022">
         <button id="add" onclick="ekle();">Görev Ekle</button>
         <button id="clear" onclick="sil();">Temizle</button>
     </div>
     <div class="all">
-
-        <div class="standby">
+        <div class="droppable standby" ondrop="drop(event)"  ondragover="allowDrop(event)">
             <h2>Bekleyen İşler</h2>
-            <div class="draggable" id="listeYapilacaklar">
-                
-            </div>
+            <div class="droppableTarget" 
+                ondrop="drop(event)"  ondragover="allowDrop(event)"
+                id="listeYapilacaklar"></div>
         </div>
-
-        <div class="continue">
+        <div class="droppable continue" >
             <h2>Devam Eden İşler</h2>
-            <div class="droppable" id="listeYapilacaklar1">
-
+            <div class="droppableTarget" 
+                ondrop="drop(event)"  ondragover="allowDrop(event)"
+                id="listeYapilacaklar1"></div>
+        </div>
+        <div class="droppable end" >
+            <h2>Biten İşler</h2>
+            <div class="droppableTarget"
+                ondrop="drop(event)"  ondragover="allowDrop(event)"
+                id="listeYapilacaklar2">
             </div>
         </div>
-
-        <div class="end">
-            <h2>Biten İşler</h2>
-            <span class="droppable" id="listeYapilacaklar2">
-
-            </span>
-        </div>
-
-
-
-
-
     </div>
 
 </body>
-
 </html>
